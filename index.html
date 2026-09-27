@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+    <meta name="theme-color" content="#111827">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Trening">
+
+    <title>Treningsapp</title>
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="app-header">
+    <div>
+        <h1>🏋️ Treningsapp</h1>
+        <p>Din personlige treningsdagbok</p>
+    </div>
+</header>
+
+<main>
+
+    <!-- DAGENS ØKT -->
+    <section id="today-screen" class="screen active">
+
+        <div class="section-heading">
+            <div>
+                <p class="eyebrow" id="today-date"></p>
+                <h2>Dagens trening</h2>
+            </div>
+        </div>
+
+        <div id="today-content"></div>
+
+    </section>
+
+
+    <!-- PROGRAMMER -->
+    <section id="programs-screen" class="screen">
+
+        <div class="section-heading">
+            <h2>Programmer</h2>
+            <button class="round-button" onclick="openProgramForm()">+</button>
+        </div>
+
+        <div id="program-list"></div>
+
+    </section>
+
+
+    <!-- ØVELSER -->
+    <section id="exercises-screen" class="screen">
+
+        <div class="section-heading">
+            <h2>Øvelser</h2>
+            <button class="round-button" onclick="openExerciseForm()">+</button>
+        </div>
+
+        <div id="exercise-list"></div>
+
+    </section>
+
+
+    <!-- HISTORIKK -->
+    <section id="history-screen" class="screen">
+
+        <div class="section-heading">
+            <h2>Historikk</h2>
+        </div>
+
+        <div id="history-list"></div>
+
+    </section>
+
+
+    <!-- AKTIV ØKT -->
+    <section id="workout-screen" class="screen">
+
+        <div class="workout-header">
+            <button class="back-button" onclick="confirmExitWorkout()">‹</button>
+
+            <div>
+                <p class="eyebrow">Pågående økt</p>
+                <h2 id="workout-title">Trening</h2>
+            </div>
+        </div>
+
+        <div id="workout-exercises"></div>
+
+        <button class="finish-button" onclick="finishWorkout()">
+            ✓ AVSLUTT ØKT
+        </button>
+
+    </section>
+
+</main>
+
+
+<!-- BUNN-MENY -->
+<nav class="bottom-navigation">
+
+    <button class="nav-button active" data-screen="today-screen">
+        <span>🏋️</span>
+        <small>I dag</small>
+    </button>
+
+    <button class="nav-button" data-screen="programs-screen">
+        <span>📋</span>
+        <small>Programmer</small>
+    </button>
+
+    <button class="nav-button" data-screen="exercises-screen">
+        <span>💪</span>
+        <small>Øvelser</small>
+    </button>
+
+    <button class="nav-button" data-screen="history-screen">
+        <span>📈</span>
+        <small>Historikk</small>
+    </button>
+
+</nav>
+
+
+<!-- MODAL -->
+<div id="modal" class="modal hidden">
+
+    <div class="modal-content">
+
+        <div class="modal-header">
+            <h2 id="modal-title"></h2>
+            <button onclick="closeModal()">×</button>
+        </div>
+
+        <div id="modal-body"></div>
+
+    </div>
+
+</div>
+
+
+<script src="app.js"></script>
+<script src="app.js"></script>
+<script src="pwa.js"></script>
+
+</body>
+</html>
+
+</body>
+</html>
